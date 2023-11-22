@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:real_estate_app/home_detail.dart';
 import 'package:real_estate_app/login_screen.dart';
+import 'package:real_estate_app/map_screen.dart';
 import 'package:real_estate_app/register_screen.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -20,6 +21,7 @@ class _HomeScreenState extends State<HomeScreen> {
   int currrentIndex = 0;
   List pages = const [
     HomeScreen(),
+    MapScreen(),
     HomeDetail(),
     LoginScreen(),
     RegisterScreen()
@@ -173,7 +175,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   navigationButton(Icons.home, 0, const HomeScreen()),
-                  navigationButton(Icons.location_city, 1, const HomeScreen()),
+                  navigationButton(Icons.location_city, 1, const MapScreen()),
                   navigationButton(Icons.shop, 2, const LoginScreen()),
                   navigationButton(Icons.message, 3, const RegisterScreen()),
                 ],
